@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd1" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" />
+  <xs:import schemaLocation="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd4" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" />
+  <xs:element xmlns:q1="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" name="EntityKeyList" type="q1:EntityKeyList" />
+  <xs:element xmlns:q2="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" name="QueryCriteria" type="q2:QueryCriteria" />
+</xs:schema>

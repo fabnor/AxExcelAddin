@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:i0="http://schemas.microsoft.com/dynamics/2011/01/services" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AifGDS" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_GenericDocumentService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://schemas.microsoft.com/dynamics/2011/01/services" location="http://dbserver01:8101/DynamicsAx/Services/AifGDS?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="NetTcpBinding_GenericDocumentService" type="i0:GenericDocumentService">
+    <wsp:PolicyReference URI="#NetTcpBinding_GenericDocumentService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="delete">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/delete" style="document" />
+      <wsdl:input name="GenericDocumentServiceDeleteRequest">
+        <soap12:header message="i0:GenericDocumentServiceDeleteRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceDeleteResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="cacheQuery">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/cacheQuery" style="document" />
+      <wsdl:input name="GenericDocumentServiceCacheQueryRequest">
+        <soap12:header message="i0:GenericDocumentServiceCacheQueryRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceCacheQueryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUsingCachedQuery">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/deleteUsingCachedQuery" style="document" />
+      <wsdl:input name="GenericDocumentServiceDeleteUsingCachedQueryRequest">
+        <soap12:header message="i0:GenericDocumentServiceDeleteUsingCachedQueryRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceDeleteUsingCachedQueryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findKeys">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/findKeys" style="document" />
+      <wsdl:input name="GenericDocumentServiceFindKeysRequest">
+        <soap12:header message="i0:GenericDocumentServiceFindKeysRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceFindKeysResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/find" style="document" />
+      <wsdl:input name="GenericDocumentServiceFindRequest">
+        <soap12:header message="i0:GenericDocumentServiceFindRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceFindResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="create">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/create" style="document" />
+      <wsdl:input name="GenericDocumentServiceCreateRequest">
+        <soap12:header message="i0:GenericDocumentServiceCreateRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceCreateResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCachedQuery">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/deleteCachedQuery" style="document" />
+      <wsdl:input name="GenericDocumentServiceDeleteCachedQueryRequest">
+        <soap12:header message="i0:GenericDocumentServiceDeleteCachedQueryRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceDeleteCachedQueryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findKeysUsingCachedQuery">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/findKeysUsingCachedQuery" style="document" />
+      <wsdl:input name="GenericDocumentServiceFindKeysUsingCachedQueryRequest">
+        <soap12:header message="i0:GenericDocumentServiceFindKeysUsingCachedQueryRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceFindKeysUsingCachedQueryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createUsingCachedQuery">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/createUsingCachedQuery" style="document" />
+      <wsdl:input name="GenericDocumentServiceCreateUsingCachedQueryRequest">
+        <soap12:header message="i0:GenericDocumentServiceCreateUsingCachedQueryRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceCreateUsingCachedQueryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/update" style="document" />
+      <wsdl:input name="GenericDocumentServiceUpdateRequest">
+        <soap12:header message="i0:GenericDocumentServiceUpdateRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceUpdateResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getQuery">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/getQuery" style="document" />
+      <wsdl:input name="GenericDocumentServiceGetQueryRequest">
+        <soap12:header message="i0:GenericDocumentServiceGetQueryRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceGetQueryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findUsingCachedQuery">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/findUsingCachedQuery" style="document" />
+      <wsdl:input name="GenericDocumentServiceFindUsingCachedQueryRequest">
+        <soap12:header message="i0:GenericDocumentServiceFindUsingCachedQueryRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceFindUsingCachedQueryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSchemas">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/getSchemas" style="document" />
+      <wsdl:input name="GenericDocumentServiceGetSchemasRequest">
+        <soap12:header message="i0:GenericDocumentServiceGetSchemasRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceGetSchemasResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getDocumentKeyFields">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/getDocumentKeyFields" style="document" />
+      <wsdl:input name="GenericDocumentServiceGetDocumentKeyFieldsRequest">
+        <soap12:header message="i0:GenericDocumentServiceGetDocumentKeyFieldsRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceGetDocumentKeyFieldsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateUsingCachedQuery">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/updateUsingCachedQuery" style="document" />
+      <wsdl:input name="GenericDocumentServiceUpdateUsingCachedQueryRequest">
+        <soap12:header message="i0:GenericDocumentServiceUpdateUsingCachedQueryRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceUpdateUsingCachedQueryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="readUsingCachedQuery">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/readUsingCachedQuery" style="document" />
+      <wsdl:input name="GenericDocumentServiceReadUsingCachedQueryRequest">
+        <soap12:header message="i0:GenericDocumentServiceReadUsingCachedQueryRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceReadUsingCachedQueryResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="read">
+      <soap12:operation soapAction="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/read" style="document" />
+      <wsdl:input name="GenericDocumentServiceReadRequest">
+        <soap12:header message="i0:GenericDocumentServiceReadRequest_Headers" part="context" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenericDocumentServiceReadResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AifFaultFault">
+        <soap12:fault use="literal" name="AifFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AifGDS">
+    <wsdl:port name="NetTcpBinding_GenericDocumentService" binding="tns:NetTcpBinding_GenericDocumentService">
+      <soap12:address location="net.tcp://dbserver01:8201/DynamicsAx/Services/AifGDS" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://dbserver01:8201/DynamicsAx/Services/AifGDS</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/DBSERVER01.CAD-MTL</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

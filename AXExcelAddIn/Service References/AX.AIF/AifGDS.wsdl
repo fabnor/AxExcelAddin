@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://schemas.microsoft.com/dynamics/2011/01/services" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/dynamics/2011/01/services" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schemas.microsoft.com/dynamics/2011/01/services/Imports">
+      <xsd:import schemaLocation="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd5" namespace="http://schemas.microsoft.com/dynamics/2011/01/services" />
+      <xsd:import schemaLocation="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd10" namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" />
+      <xsd:import schemaLocation="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd11" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" />
+      <xsd:import schemaLocation="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd1" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" />
+      <xsd:import schemaLocation="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd2" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey" />
+      <xsd:import schemaLocation="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd3" />
+      <xsd:import schemaLocation="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd4" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" />
+      <xsd:import schemaLocation="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.Framework.Services.Metadata.Contracts" />
+      <xsd:import schemaLocation="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.Framework.Services.Metadata" />
+      <xsd:import schemaLocation="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd8" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.Framework.Services.Metadata.Enums" />
+      <xsd:import schemaLocation="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.Framework.Services" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GenericDocumentServiceDeleteRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceDeleteRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceDeleteRequest_Headers">
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q1:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceDeleteResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_delete_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q2:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceCacheQueryRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceCacheQueryRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceCacheQueryRequest_Headers">
+    <wsdl:part xmlns:q3="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q3:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceCacheQueryResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceCacheQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_cacheQuery_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q4:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceDeleteUsingCachedQueryRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceDeleteUsingCachedQueryRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceDeleteUsingCachedQueryRequest_Headers">
+    <wsdl:part xmlns:q5="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q5:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceDeleteUsingCachedQueryResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceDeleteUsingCachedQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_deleteUsingCachedQuery_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q6:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceFindKeysRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceFindKeysRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceFindKeysRequest_Headers">
+    <wsdl:part xmlns:q7="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q7:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceFindKeysResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceFindKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_findKeys_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q8:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceFindRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceFindRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceFindRequest_Headers">
+    <wsdl:part xmlns:q9="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q9:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceFindResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_find_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q10:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceCreateRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceCreateRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceCreateRequest_Headers">
+    <wsdl:part xmlns:q11="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q11:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceCreateResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_create_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q12:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceDeleteCachedQueryRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceDeleteCachedQueryRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceDeleteCachedQueryRequest_Headers">
+    <wsdl:part xmlns:q13="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q13:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceDeleteCachedQueryResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceDeleteCachedQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_deleteCachedQuery_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q14:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceFindKeysUsingCachedQueryRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceFindKeysUsingCachedQueryRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceFindKeysUsingCachedQueryRequest_Headers">
+    <wsdl:part xmlns:q15="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q15:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceFindKeysUsingCachedQueryResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceFindKeysUsingCachedQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_findKeysUsingCachedQuery_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q16:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceCreateUsingCachedQueryRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceCreateUsingCachedQueryRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceCreateUsingCachedQueryRequest_Headers">
+    <wsdl:part xmlns:q17="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q17:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceCreateUsingCachedQueryResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceCreateUsingCachedQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_createUsingCachedQuery_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q18:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceUpdateRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceUpdateRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceUpdateRequest_Headers">
+    <wsdl:part xmlns:q19="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q19:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceUpdateResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_update_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q20:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceGetQueryRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceGetQueryRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceGetQueryRequest_Headers">
+    <wsdl:part xmlns:q21="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q21:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceGetQueryResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceGetQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_getQuery_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q22:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceFindUsingCachedQueryRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceFindUsingCachedQueryRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceFindUsingCachedQueryRequest_Headers">
+    <wsdl:part xmlns:q23="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q23:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceFindUsingCachedQueryResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceFindUsingCachedQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_findUsingCachedQuery_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q24:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceGetSchemasRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceGetSchemasRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceGetSchemasRequest_Headers">
+    <wsdl:part xmlns:q25="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q25:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceGetSchemasResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceGetSchemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_getSchemas_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q26:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceGetDocumentKeyFieldsRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceGetDocumentKeyFieldsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceGetDocumentKeyFieldsRequest_Headers">
+    <wsdl:part xmlns:q27="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q27:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceGetDocumentKeyFieldsResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceGetDocumentKeyFieldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_getDocumentKeyFields_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q28:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceUpdateUsingCachedQueryRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceUpdateUsingCachedQueryRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceUpdateUsingCachedQueryRequest_Headers">
+    <wsdl:part xmlns:q29="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q29:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceUpdateUsingCachedQueryResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceUpdateUsingCachedQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_updateUsingCachedQuery_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q30:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceReadUsingCachedQueryRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceReadUsingCachedQueryRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceReadUsingCachedQueryRequest_Headers">
+    <wsdl:part xmlns:q31="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q31:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceReadUsingCachedQueryResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceReadUsingCachedQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_readUsingCachedQuery_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q32:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceReadRequest">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceReadRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceReadRequest_Headers">
+    <wsdl:part xmlns:q33="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q33:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentServiceReadResponse">
+    <wsdl:part name="parameters" element="tns:GenericDocumentServiceReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericDocumentService_read_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q34:AifFault" />
+  </wsdl:message>
+  <wsdl:portType name="GenericDocumentService">
+    <wsdl:operation name="delete">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/delete" name="GenericDocumentServiceDeleteRequest" message="tns:GenericDocumentServiceDeleteRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/deleteResponse" name="GenericDocumentServiceDeleteResponse" message="tns:GenericDocumentServiceDeleteResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/deleteAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_delete_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cacheQuery">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/cacheQuery" name="GenericDocumentServiceCacheQueryRequest" message="tns:GenericDocumentServiceCacheQueryRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/cacheQueryResponse" name="GenericDocumentServiceCacheQueryResponse" message="tns:GenericDocumentServiceCacheQueryResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/cacheQueryAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_cacheQuery_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteUsingCachedQuery">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/deleteUsingCachedQuery" name="GenericDocumentServiceDeleteUsingCachedQueryRequest" message="tns:GenericDocumentServiceDeleteUsingCachedQueryRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/deleteUsingCachedQueryResponse" name="GenericDocumentServiceDeleteUsingCachedQueryResponse" message="tns:GenericDocumentServiceDeleteUsingCachedQueryResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/deleteUsingCachedQueryAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_deleteUsingCachedQuery_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findKeys">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/findKeys" name="GenericDocumentServiceFindKeysRequest" message="tns:GenericDocumentServiceFindKeysRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/findKeysResponse" name="GenericDocumentServiceFindKeysResponse" message="tns:GenericDocumentServiceFindKeysResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/findKeysAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_findKeys_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/find" name="GenericDocumentServiceFindRequest" message="tns:GenericDocumentServiceFindRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/findResponse" name="GenericDocumentServiceFindResponse" message="tns:GenericDocumentServiceFindResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/findAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_find_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="create">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/create" name="GenericDocumentServiceCreateRequest" message="tns:GenericDocumentServiceCreateRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/createResponse" name="GenericDocumentServiceCreateResponse" message="tns:GenericDocumentServiceCreateResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/createAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_create_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCachedQuery">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/deleteCachedQuery" name="GenericDocumentServiceDeleteCachedQueryRequest" message="tns:GenericDocumentServiceDeleteCachedQueryRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/deleteCachedQueryResponse" name="GenericDocumentServiceDeleteCachedQueryResponse" message="tns:GenericDocumentServiceDeleteCachedQueryResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/deleteCachedQueryAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_deleteCachedQuery_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findKeysUsingCachedQuery">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/findKeysUsingCachedQuery" name="GenericDocumentServiceFindKeysUsingCachedQueryRequest" message="tns:GenericDocumentServiceFindKeysUsingCachedQueryRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/findKeysUsingCachedQueryResponse" name="GenericDocumentServiceFindKeysUsingCachedQueryResponse" message="tns:GenericDocumentServiceFindKeysUsingCachedQueryResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/findKeysUsingCachedQueryAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_findKeysUsingCachedQuery_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createUsingCachedQuery">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/createUsingCachedQuery" name="GenericDocumentServiceCreateUsingCachedQueryRequest" message="tns:GenericDocumentServiceCreateUsingCachedQueryRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/createUsingCachedQueryResponse" name="GenericDocumentServiceCreateUsingCachedQueryResponse" message="tns:GenericDocumentServiceCreateUsingCachedQueryResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/createUsingCachedQueryAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_createUsingCachedQuery_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/update" name="GenericDocumentServiceUpdateRequest" message="tns:GenericDocumentServiceUpdateRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/updateResponse" name="GenericDocumentServiceUpdateResponse" message="tns:GenericDocumentServiceUpdateResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/updateAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_update_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getQuery">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/getQuery" name="GenericDocumentServiceGetQueryRequest" message="tns:GenericDocumentServiceGetQueryRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/getQueryResponse" name="GenericDocumentServiceGetQueryResponse" message="tns:GenericDocumentServiceGetQueryResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/getQueryAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_getQuery_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findUsingCachedQuery">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/findUsingCachedQuery" name="GenericDocumentServiceFindUsingCachedQueryRequest" message="tns:GenericDocumentServiceFindUsingCachedQueryRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/findUsingCachedQueryResponse" name="GenericDocumentServiceFindUsingCachedQueryResponse" message="tns:GenericDocumentServiceFindUsingCachedQueryResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/findUsingCachedQueryAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_findUsingCachedQuery_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSchemas">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/getSchemas" name="GenericDocumentServiceGetSchemasRequest" message="tns:GenericDocumentServiceGetSchemasRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/getSchemasResponse" name="GenericDocumentServiceGetSchemasResponse" message="tns:GenericDocumentServiceGetSchemasResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/getSchemasAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_getSchemas_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDocumentKeyFields">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/getDocumentKeyFields" name="GenericDocumentServiceGetDocumentKeyFieldsRequest" message="tns:GenericDocumentServiceGetDocumentKeyFieldsRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/getDocumentKeyFieldsResponse" name="GenericDocumentServiceGetDocumentKeyFieldsResponse" message="tns:GenericDocumentServiceGetDocumentKeyFieldsResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/getDocumentKeyFieldsAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_getDocumentKeyFields_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUsingCachedQuery">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/updateUsingCachedQuery" name="GenericDocumentServiceUpdateUsingCachedQueryRequest" message="tns:GenericDocumentServiceUpdateUsingCachedQueryRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/updateUsingCachedQueryResponse" name="GenericDocumentServiceUpdateUsingCachedQueryResponse" message="tns:GenericDocumentServiceUpdateUsingCachedQueryResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/updateUsingCachedQueryAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_updateUsingCachedQuery_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="readUsingCachedQuery">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/readUsingCachedQuery" name="GenericDocumentServiceReadUsingCachedQueryRequest" message="tns:GenericDocumentServiceReadUsingCachedQueryRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/readUsingCachedQueryResponse" name="GenericDocumentServiceReadUsingCachedQueryResponse" message="tns:GenericDocumentServiceReadUsingCachedQueryResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/readUsingCachedQueryAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_readUsingCachedQuery_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="read">
+      <wsdl:input wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/read" name="GenericDocumentServiceReadRequest" message="tns:GenericDocumentServiceReadRequest" />
+      <wsdl:output wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/readResponse" name="GenericDocumentServiceReadResponse" message="tns:GenericDocumentServiceReadResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/readAifFaultFault" name="AifFaultFault" message="tns:GenericDocumentService_read_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:tns="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="QueryCriteria" type="tns:QueryCriteria" />
+  <xsd:complexType name="QueryCriteria">
+    <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+      <xsd:element name="CriteriaElement" type="tns:CriteriaElement" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CriteriaElement">
+    <xsd:sequence>
+      <xsd:element name="DataSourceName" type="xsd:string" />
+      <xsd:element name="FieldName" type="xsd:string" />
+      <xsd:element name="Operator" type="tns:Operator" />
+      <xsd:element name="Value1" type="xsd:string" />
+      <xsd:element minOccurs="0" name="Value2" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Operator">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Equal" />
+      <xsd:enumeration value="NotEqual" />
+      <xsd:enumeration value="Greater" />
+      <xsd:enumeration value="GreaterOrEqual" />
+      <xsd:enumeration value="Less" />
+      <xsd:enumeration value="LessOrEqual" />
+      <xsd:enumeration value="Range" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

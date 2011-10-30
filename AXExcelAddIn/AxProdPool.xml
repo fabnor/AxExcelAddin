@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Batch BatchId="47cdbac9-683d-403b-8953-0ca027af2106" xmlns="http://schemas.microsoft.com/dynamics/2009/06/documents/Batch">
+  <Envelope xmlns="http://schemas.microsoft.com/dynamics/2011/01/documents/Message">
+    <Header>
+      <MessageId>207d629f-94d8-4f89-916d-b4d884e6b76a</MessageId>
+      <Company>{0}</Company>
+      <Action>http://schemas.microsoft.com/dynamics/2011/01/services/GenericDocumentService/createUsingCachedQuery</Action>
+    </Header>
+    <Body>
+      <MessageParts xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <_cachedAxdQueryId xmlns="http://schemas.microsoft.com/dynamics/2011/01/services">d1ab862b-2980-4fa5-8bc6-1597588eaffa</_cachedAxdQueryId>
+        <_documentXml xmlns="http://schemas.microsoft.com/dynamics/2011/01/services">
+          <?xml version="1.0" encoding="utf-16"?>
+          <ProdPool xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/dynamics/2008/01/documents/ProdPool">
+            <SenderId xsi:nil="true" />
+            <ProdPool class="entity">
+              <_DocumentHash xsi:nil="true" />
+              <ProdPoolId>{1}</ProdPoolId>
+              <Name>{2}</Name>
+            </ProdPool>
+          </ProdPool>
+        </_documentXml>
+      </MessageParts>
+    </Body>
+  </Envelope>
+</Batch>

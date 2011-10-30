@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0dbf429b-2af9-498b-9d68-a238eea41164" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://dbserver01:8101/DynamicsAx/Services/AIFGDS" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AifGDS.xsd" MetadataType="Schema" ID="d5f40e51-3171-482b-b2fe-d158af80e825" SourceId="1" SourceUrl="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd0" />
+    <MetadataFile FileName="AifGDS1.xsd" MetadataType="Schema" ID="d154600d-3e32-437b-9371-2c284064c408" SourceId="1" SourceUrl="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd4" />
+    <MetadataFile FileName="AifGDS2.xsd" MetadataType="Schema" ID="bb5b8173-9d89-4c07-8d21-baca35f6d69c" SourceId="1" SourceUrl="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd8" />
+    <MetadataFile FileName="AifGDS3.xsd" MetadataType="Schema" ID="52877e3b-c8e0-4c45-a296-a393cf909aad" SourceId="1" SourceUrl="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd11" />
+    <MetadataFile FileName="AifGDS4.xsd" MetadataType="Schema" ID="b6ff997d-16e3-4332-b0c3-756598e47326" SourceId="1" SourceUrl="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd1" />
+    <MetadataFile FileName="AifGDS5.xsd" MetadataType="Schema" ID="834e4226-3b6b-4780-b856-7c74f4729e06" SourceId="1" SourceUrl="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd5" />
+    <MetadataFile FileName="AifGDS6.xsd" MetadataType="Schema" ID="bb078978-1922-4aa6-b772-d9136d4bf262" SourceId="1" SourceUrl="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd9" />
+    <MetadataFile FileName="AifGDS.wsdl" MetadataType="Wsdl" ID="1cecde5b-7367-434e-bf44-073773379b71" SourceId="1" SourceUrl="http://dbserver01:8101/DynamicsAx/Services/AifGDS?wsdl=wsdl0" />
+    <MetadataFile FileName="AifGDS7.xsd" MetadataType="Schema" ID="a73f77de-a538-4cce-94c0-90e76eda19e6" SourceId="1" SourceUrl="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd6" />
+    <MetadataFile FileName="AifGDS8.xsd" MetadataType="Schema" ID="20eb11bb-1ba9-4fe6-9d4c-8c903743a1c3" SourceId="1" SourceUrl="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd10" />
+    <MetadataFile FileName="AifGDS9.xsd" MetadataType="Schema" ID="ae9a83b8-c631-4555-b852-9fa56034a483" SourceId="1" SourceUrl="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd2" />
+    <MetadataFile FileName="AifGDS10.xsd" MetadataType="Schema" ID="3ece72c6-a265-4937-aa46-63136dcb929e" SourceId="1" SourceUrl="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd3" />
+    <MetadataFile FileName="AifGDS11.xsd" MetadataType="Schema" ID="8a915ad6-9bf5-4e39-9b00-abe6f880ab80" SourceId="1" SourceUrl="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd7" />
+    <MetadataFile FileName="AifGDS12.xsd" MetadataType="Schema" ID="7d174cb9-3253-41e7-9370-1fc1c80d1df0" SourceId="1" SourceUrl="http://dbserver01:8101/DynamicsAx/Services/AifGDS?xsd=xsd12" />
+    <MetadataFile FileName="AifGDS1.wsdl" MetadataType="Wsdl" ID="ab12d70a-8bda-4928-9c8d-84018ee82b5d" SourceId="1" SourceUrl="http://dbserver01:8101/DynamicsAx/Services/AIFGDS" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
