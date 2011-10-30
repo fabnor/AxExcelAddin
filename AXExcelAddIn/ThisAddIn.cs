@@ -37,7 +37,7 @@ namespace AXExcelAddIn
 
                 AX.AIF.QueryService.QueryServiceClient queryServiceClient = new QueryServiceClient();
 
-                QueryService.QueryDataFieldMetadata queryDataFieldMetaData = new QueryDataSourceMetadata();
+                //QueryService.QueryDataFieldMetadata queryDataFieldMetaData = new QueryDataSourceMetadata();
 
 
                 QueryMetadata query = new QueryMetadata();
